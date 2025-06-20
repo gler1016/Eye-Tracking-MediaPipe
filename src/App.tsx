@@ -102,25 +102,28 @@ function App() {
               <h3 style={{ opacity: 0.6 }}>
                 <s>Responsive, precision eye tracking.(on Vision Pro)</s>
               </h3>
-              <h1 style={{
-                opacity: 0.95,
-                background: 'linear-gradient(90deg, #007cf0, #00dfd8)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                fontWeight: 800,
-                fontSize: '2.5rem',
-                marginBottom: '0.5em',
-              }}>
+              <h1
+                style={`
+                  opacity: 0.95;
+                  background: linear-gradient(90deg, #007cf0, #00dfd8);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  font-weight: 800;
+                  font-size: 2.5rem;
+                  margin-bottom: 0.5em;
+                  color: transparent;
+                `}
+              >
                 Budget Version Eye Tracking
                 <br />
-                <span style={{ fontSize: '1.2rem', fontWeight: 400, opacity: 0.7 }}>
+                <span style="font-size: 1.2rem; font-weight: 400; opacity: 0.7;">
                   Webcam-based Eye Tracking Demo
                 </span>
               </h1>
-              <h4 style={{ opacity: 0.75, fontWeight: 500, color: '#007cf0' }}>
+              <h4 style="opacity: 0.75; font-weight: 500; color: #007cf0;">
                 Eye tracking via webcam powered by MediaPipe
               </h4>
-              <p style={{ opacity: 0.4, fontStyle: 'italic' }}>
+              <p style="opacity: 0.4; font-style: italic;">
                 Works on any laptop or desktop with a webcam
               </p>
             </article>
@@ -139,7 +142,7 @@ function App() {
                   {"Show Minimap"}
                 </Checkbox>
               </Show>
-              <div class={css.tip} style={{ color: '#00b894', fontWeight: 500 }}>
+              <div class={css.tip} style="color: #00b894; font-weight: 500;">
                 Browser viewport & screen boundary
               </div>
               <Show when={showMinimap()}>
@@ -157,7 +160,7 @@ function App() {
                 </Checkbox>
               </Show>
               {/* 开启摄像头后展示 */}
-              <div class={css.tip} style={{ color: '#0984e3', fontWeight: 500 }}>
+              <div class={css.tip} style="color: #0984e3; font-weight: 500;">
                 3D position of webcam & face
               </div>
               <TrackMonitor
