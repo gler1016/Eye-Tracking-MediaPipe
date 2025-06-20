@@ -1,0 +1,118 @@
+.wrapper {
+  box-sizing: border-box;
+
+  max-width: 900px;
+  margin: 0 auto;
+
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 3em 0;
+
+  height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+
+  header {
+    width: 100%;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    border-radius: 0 0 24px 24px;
+    padding: 1.5em 2em 1em 2em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // position: sticky;
+    // top: 0;
+
+    .header-actions {
+      display: flex;
+      gap: 1em;
+    }
+  }
+  main {
+    padding: 1em 0 0;
+
+    .hero {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 2.5em 2em 2em 2em;
+      margin-bottom: 2em;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+
+      display: grid;
+      gap: 2em;
+      grid-template-columns: minmax(200px, auto) minmax(0, 1fr);
+
+      .hero-action {
+        display: grid;
+        place-items: center;
+        gap: 1em;
+        align-content: center;
+      }
+
+      .hero-desc {
+        display: grid;
+        gap: 0.4em;
+        // line-height: 1.4em;
+      }
+    }
+
+    .controls {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin-bottom: 2em;
+
+      .control-item {
+        background: rgba(255,255,255,0.95);
+        border-radius: 18px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        padding: 1.5em 1em;
+        min-width: 260px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .tip {
+        margin-bottom: 0.7em;
+        font-size: 1.05em;
+        opacity: 0.85;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0;
+  }
+}
+
+.btn {
+  background: linear-gradient(90deg, #007cf0 0%, #00dfd8 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: linear-gradient(90deg, #00dfd8 0%, #007cf0 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
